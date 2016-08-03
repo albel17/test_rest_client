@@ -3,12 +3,16 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
 
     <beans profile="dev">
         <bean id="greetingService" class="client.GreetingsService"/>
+
     </beans>
 
     <beans profile="prod">
         <bean id="greetingService" class="client.GreetingsServiceProd"/>
     </beans>
+
+
 </beans>

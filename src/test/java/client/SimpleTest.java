@@ -20,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({
-    "classpath*:config/*-context.xml"
+        "classpath*:config/*-context.xml"
 })
 @WebAppConfiguration
 //@Profile({"dev"})
@@ -37,12 +37,12 @@ public class SimpleTest {
     }
 
     @Test
-    public void firstTest(){
+    public void firstTest() {
         Assert.assertNull(null);
     }
 
     @Test
-    public void secondTest() throws Exception{
+    public void secondTest() throws Exception {
 
         mockMvc.perform(get("http://localhost:9090/greeting").accept(MediaType.parseMediaType("application/json;charset=UTF-8")))
                 .andExpect(status().isOk())
